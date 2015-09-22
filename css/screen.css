@@ -20,9 +20,63 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+*:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; position: relative; }
+
+@font-face { font-family: "Roboto Regular"; src: url("fonts/Roboto Regular.eot"); src: url("fonts/Roboto Regular.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto Regular.woff2") format("woff2"), url("fonts/Roboto Regular.woff") format("woff"), url("fonts/Roboto Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "Futura Demic Regular"; src: url("fonts/FuturaDemiCRegular.eot"); src: url("fonts/FuturaDemiCRegular.eot?#iefix") format("embedded-opentype"), url("fonts/FuturaDemiCRegular.woff2") format("woff2"), url("fonts/FuturaDemiCRegular.woff") format("woff"), url("fonts/FuturaDemiCRegular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+.is-left { text-align: left; }
+
+.is-right { text-align: right; }
+
+.is-center { text-align: center; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+.inner { margin: auto; width: 960px; }
+
+.inner__header, .inner__footer { max-width: 1350px; width: 90%; padding: 0 20px; }
+.inner__header:before, .inner__footer:before, .inner__header:after, .inner__footer:after { content: " "; display: table; }
+.inner__header:after, .inner__footer:after { clear: both; }
+@media only screen and (max-width: 900px) { .inner__header, .inner__footer { width: 100%; padding: 0; } }
+
+.inner__footer { padding: 0 20px; }
+
+.logo { background: url("../img/logo.png") no-repeat left top; font-size: 0; color: transparent; width: 119px; height: 16px; }
+
+.top__header { min-height: 40px; background-color: #19223c; overflow: hidden; margin-bottom: 100px; }
+.top__header__logo { float: left; margin-top: 12px; }
+@media only screen and (max-width: 900px) { .top__header__logo { float: right; display: block; margin-right: 20px; margin-top: 20px; } }
+.top__header__nav { float: right; padding-top: 12px; }
+@media only screen and (max-width: 900px) { .top__header__nav { float: none; padding: 0; margin: 50px 0 25px; } }
+.top__header__nav ul { list-style: none; padding: 0; margin: 0; }
+.top__header__nav li { display: inline-block; vertical-align: middle; margin-right: 15px; font-size: 11px; }
+.top__header__nav li:last-child { margin-right: 0; }
+@media only screen and (max-width: 900px) { .top__header__nav li { display: block; font-size: 20px; margin: 0; } }
+.top__header__nav li a { text-transform: uppercase; color: #fff; text-decoration: none; padding: 0 5px; font-family: "Futura Demic Regular", sans-serif; }
+@media only screen and (max-width: 900px) { .top__header__nav li a { display: block; padding: 5px 0; text-indent: 20px; } }
+.top__header__nav li a:hover, .top__header__nav li a:focus { color: #00aed9; -moz-transition: background-color 0.5s ease; -o-transition: background-color 0.5s ease; -webkit-transition: background-color 0.5s ease; transition: background-color 0.5s ease; }
+@media only screen and (max-width: 900px) { .top__header__nav li a:hover, .top__header__nav li a:focus { text-decoration: none; transform: scale(1); display: block; color: #000; background-color: #00abd6; } }
+
+.footer { font-size: 0; background-color: #19223c; color: #fff; padding: 35px 0 65px; }
+.footer__logo { float: left; margin-top: 0px; }
+@media only screen and (max-width: 900px) { .footer__logo { display: none; } }
+.footer__title { text-transform: uppercase; font-size: 12px; font-family: "Roboto Regular", sans-serif; }
+.footer__text { overflow: hidden; margin-bottom: 45px; font-size: 12px; font-family: "Roboto Regular", sans-serif; }
+.footer__bl { display: inline-block; width: 33%; padding-right: 20px; vertical-align: top; }
+.footer__bl:last-child { padding-right: 0; }
+.footer__bl > div { display: inline-block; text-align: left; }
+.footer__bl p { font-size: 12px; color: #fff; line-height: 1.5; font-family: "Roboto Regular", sans-serif; }
+.footer__bl a { font-size: 12px; color: #fff; display: block; text-decoration: none; line-height: 1.5; }
+.footer h4, .footer .adr, .footer .btcont { margin-bottom: 20px; }
+.footer h4 { color: #00b0dc; }
+
+.mainfooter { margin-left: 159px; overflow: hidden; }
+@media only screen and (max-width: 900px) { .mainfooter { margin-left: 0; } }
