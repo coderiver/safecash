@@ -1,1 +1,158 @@
 // Normally mainpage styles
+$bg: #19223c
+$fontSize: 11px
+$img: '../img/'
+$blue: #00b0dc
+$sc: 1.05
+
+
+
+
+.inner
+	margin: auto
+	width: 960px
+.inner__header
+	max-width: 1350px
+	width: 90%
+	padding: 0 20px	
+	&:before, &:after
+		content: ' '
+		display: table
+	&:after
+		clear: both
+	+r(900)
+		width: 100%
+		padding: 0
+.inner__footer
+	@extend .inner__header
+	padding: 0 20px
+.logo
+	background: url($img + 'logo.png') no-repeat left top
+	font-size: 0
+	color: transparent
+	width: 119px
+	height: 16px
+
+
+.top__header
+	min-height: 40px
+	background-color: $bg
+	overflow: hidden
+	margin-bottom: 100px
+	&__logo 
+		float: left
+		margin-top: 12px
+		+r(900)
+			float: right
+			display: block
+			margin-right: 20px
+			margin-top: 20px
+	&__nav
+		float: right
+		padding-top: 12px
+		+r(900)
+			float: none
+			padding: 0
+			margin: 50px 0 25px
+
+		ul
+			list-style: none
+			padding: 0
+			margin: 0
+
+		li
+			display: inline-block
+			vertical-align: middle
+			margin-right: 15px
+			font-size: 11px
+			&:last-child
+				margin-right: 0
+
+			+r(900)
+				display: block
+				font-size: 20px
+				margin: 0
+			a
+				text-transform: uppercase
+				color: #fff
+				text-decoration: none
+				padding: 0 5px
+				+fRegular
+				+r(900)
+					display: block
+					padding: 5px 0
+					text-indent: 20px
+				&:hover, &:focus
+					color: darken($blue, .6)
+					+tr(background-color 0.5s ease)
+					+r(900)
+						text-decoration: none
+						transform: scale(1)
+						display: block
+						color: #000
+						background-color: darken($blue, 1.2)
+
+
+
+.footer
+	font-size: 0
+	background-color: $bg
+	// position: absolute
+	// bottom: 0 
+	// left: 0
+	// right: 0
+	color: #fff
+	padding: 35px 0 65px
+
+	
+	&__logo
+		float: left
+		margin-top: 0px
+		+r(900)
+			display: none
+	&__title
+		text-transform: uppercase
+		font-size: 12px
+		+rRegular
+	&__text
+		overflow: hidden
+		margin-bottom: 45px
+		font-size: 12px
+		+rRegular
+	&__bl
+		display: inline-block	
+		width: 33%
+		padding-right: 20px
+		vertical-align: top
+		&:last-child 
+			padding-right: 0
+		> div 
+			display: inline-block
+			text-align: left	
+	
+		p
+			font-size: 12px
+			color: #fff
+			line-height: 1.5
+			+rRegular
+		a
+			font-size: 12px
+			color: #fff
+			display: block
+			text-decoration: none
+			line-height: 1.5
+	h4, .adr, .btcont
+		margin-bottom: 20px
+	h4 
+		color: $blue	
+
+.mainfooter
+	margin-left: 159px
+	overflow: hidden	
+	+r(900)
+		margin-left: 0
+
+
+	
+		
+
