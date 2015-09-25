@@ -5,27 +5,24 @@ $img: '../img/'
 $blue: #00b0dc
 $sc: 1.05
 
-
-
-
 .inner
 	margin: auto
 	width: 960px
-.inner__header
+
+.inner_l
 	max-width: 1350px
-	width: 90%
+	width: 96%
 	padding: 0 20px	
+	position: relative
 	&:before, &:after
 		content: ' '
 		display: table
 	&:after
 		clear: both
 	+r(900)
-		width: 100%
+		width: 94%
 		padding: 0
-.inner__footer
-	@extend .inner__header
-	padding: 0 20px
+
 .logo
 	background: url($img + 'logo.png') no-repeat left top
 	font-size: 0
@@ -33,12 +30,12 @@ $sc: 1.05
 	width: 119px
 	height: 16px
 
-
+//HEADER
 .top__header
 	min-height: 40px
 	background-color: $bg
 	overflow: hidden
-	margin-bottom: 100px
+
 	&__logo 
 		float: left
 		margin-top: 12px
@@ -72,6 +69,7 @@ $sc: 1.05
 				display: block
 				font-size: 20px
 				margin: 0
+
 			a
 				text-transform: uppercase
 				color: #fff
@@ -84,16 +82,532 @@ $sc: 1.05
 					text-indent: 20px
 				&:hover, &:focus
 					color: darken($blue, .6)
-					+tr(background-color 0.5s ease)
+					+tr(all 0.5s ease)
 					+r(900)
 						text-decoration: none
 						transform: scale(1)
 						display: block
 						color: #000
 						background-color: darken($blue, 1.2)
+//TOP
+.top
+	background: url($img + 'top-bg.jpg') top center
+	min-height: 757px
+	position: relative
+	overflow: hidden
+	padding-bottom: 58px
+	+cover
+
+	&__title
+		margin: 103px 0
+		position: relative
+		&:after
+			display: block
+			content: ' '
+			position: absolute
+			bottom: -30px
+			left: 0
+			width: 65px
+			border-bottom: 2px solid white
+		+r(800)
+			font-size: 39px
+		+r(640)
+			font-size: 35px
+		+r(600)
+			margin: 80px 0	
+		+r(480)
+			margin: 70px 0
+			font: 20px/1.5 "Futura Demic Regular", sans-serif
+			&:after
+				bottom: -15px	
+
+	&__cont
+		color: white
+		font: 400 16px/36px "Futura Demic Regular", sans-serif
+		text-transform: uppercase	
+		overflow: hidden
+		float: left
+		min-width: 410px
+		width: 35%
+		padding-right: 30px
+		+r(900)
+			min-width: 350px
+		+r(720)
+			min-width: 285px
+		+r(620)
+			min-width: 270px	
+		+r(600)
+			min-width: auto
+			width: auto	
+			float: none	
+			padding-right: 0
+			margin-bottom: 30px
+		+r(480)
+			line-height: 1.7
+			font-size: 16px	
+
+	&__l
+		&:before, &:after
+			content: ' '
+			display: table
+		&:after
+			clear: both	
+	.btn__transparent
+		position: absolute
+		right: 10px
+		top: 14px		
+
+//REGISTRATION
+.registration
+	width: (476px / 1300px) * 100% 
+	//max-width: 476px
+	width: 476px
+	min-height: 398px
+	//padding: 27px 56px 48px 61px
+	padding-top: (27px / 1063px) * 100%
+	padding-right: (56px / 1063px) * 100%
+	padding-bottom: (48px / 1063px) * 100%
+	padding-left: (61px / 1063px) * 100%
+	background-color: white
+	border: 3px solid #00b0dc
+	float: right
+	+r(1024)
+		width: auto
+	+r(800)
+		min-height: 390px	
+	+r(640)
+		min-height: 387px
+	+r(600)
+		min-height: auto
+		float: none
+		width: auto	
+
+	&__title
+		margin-bottom: 35px
+		color: #00b0dc
+		font: 400 30px/48px "Futura Demic Regular", sans-serif
+		text-align: center
+		text-transform: uppercase
+		+r(800)
+			font-size: 24px
+			margin-bottom: 25px
+		+r(640)
+			font-size: 20px	
+		+r(480)
+			margin-bottom: 10px	
+
+	input
+		width: 100%
+		display: block
+		height: 34px
+		border: 2px solid #ccc
+		padding: 0 20px
+		+placeholder
+			text-align: center
+			text-transform: uppercase
+		&[type=checkbox]
+			display: inline-block
+			width: auto
+			vertical-align: middle
+			width: 21px
+			height: 19px
+			border: 2px solid #ccc
+			margin-right: 20px	
+			padding: 0
+
+	label
+		width: 100%
+		display: block
+		margin-bottom: 19px
+		.check
+			display: inline-block
+			vertical-align: middle
+			color: #00b0dc
+			font: 400 12px/20px "Futura Demic Regular", sans-serif
+			text-decoration: underline
+			text-transform: uppercase
+
+	label[for=ac]
+		display: inline-block
+		width: auto
+
+	button
+		&[type=button]
+			width: 100%
+			height: 68px
+			background-color: #00b0dc
+			border: 2px solid #00b0dc
+			color: white
+			font: 400 18px/40px "Futura Demic Regular", sans-serif
+			text-transform: uppercase
+			outline: 0
+			&:active
+				background-color: #25A0BE
+				+tr(all 0.1s ease)
+			+r(480)
+				height: 40px	
 
 
+//MERCHANTS
+.merchants
+	min-height: 523px
+	font-size: 0	
+	+r(720)
+		margin-bottom: 60px
 
+	&__top
+		text-align: center
+		font: 400 18px/48px "Futura Demic Regular", sans-serif
+		color: #19223c
+		text-transform: uppercase
+		+r(480)
+			font-size: 17px
+			padding-top: 30px
+			line-height: 1.5
+
+	&__title
+		@extend .merchants__top
+		font-size: 72px
+		padding-top: 0
+		+r(720)
+			font-size: 45px
+		+r(480)
+			font-size: 30px	
+			line-height: 1.5
+
+//FIG
+.fig
+	width: 33%
+	min-height: 432px
+	display: inline-block
+	text-align: center	
+	vertical-align: top
+	margin-bottom: 65px
+	position: relative
+	+r(720)
+		width: 100%
+		display: block
+		min-height: auto
+		margin-bottom: 0px
+
+	.wrp
+		margin-bottom: 65px
+		min-height: 318px
+		position: relative
+		+r(720)
+			margin-bottom: 10px
+		
+		img
+			display: block
+			margin: auto
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			max-width: 100%
+			height: auto	
+
+	figcaption
+		color: #19223c
+		font: 400 14px/22px "Roboto Regular", sans-serif
+		position: relative
+		text-align: left
+		+r(720)
+			text-align: center
+			font-size: 18px
+
+		span
+			display: block
+			color: #19223c
+			font: 400 36px/42px "Futura Demic Regular"
+			text-transform: uppercase	
+			position: absolute
+			left: 0px
+			top: -20px
+			+r(720)
+				position: static
+				display: inline
+
+		p
+			margin-left: 40px
+			+r(720)
+				display: inline
+				margin-left: 15px
+
+//DIFFERENCE
+.difference
+	min-height: 363px
+	font-size: 0
+	overflow: hidden
+	margin-bottom: 40px
+
+	&__top
+		@extend .merchants__top
+
+	&__title
+		@extend .merchants__title	
+		margin-bottom: 55px
+
+	&__cont
+		font-size: 14px
+		display: inline-block
+		width: 25%
+		font-size: 0
+		vertical-align: top
+		text-align: center
+		padding-right: (50px / 1300px) * 100%
+		+r(720)
+			width: 50%
+			margin-bottom: 30px
+			&:nth-of-type(even)
+				padding-right: 0
+		+r(480)
+			width: 100%
+			display: block
+			padding: 0	15px	
+
+		h6
+			padding-bottom: 30px
+			border-bottom: 2px solid #eaebeb
+			text-align: center
+			text-transform: uppercase
+			font: 400 14px/20px "Futura Demic Regular", sans-serif
+			margin-bottom: 35px
+			position: relative
+			color: #19223c
+			&:after
+				content: ' '
+				display: block
+				width: 15px
+				height: 15px
+				background-color: #00b0dc
+				bottom: -15px
+				position: absolute
+				left: 50%
+				margin-left: -7.5px
+				z-index: 99
+
+		p
+			color: #666
+			font-size: 14px
+			font-weight: 400
+			line-height: 22px
+			text-align: left
+			+fRegular
+
+//GIRL
+.girl
+	min-height: 730px
+	+jpg(girl)
+	width: auto
+	+cover
+	padding-top: 85px
+
+	blockquote
+		max-width: 530px
+		min-height: 186px
+		float: right
+		color: white
+		font: 400 30px/40px "Roboto Regular", sans-serif
+		display: inline-block
+		overflow: hidden
+		text-transform: uppercase
+		+r(720)
+			font-size: 25px
+		+r(480)
+			font-size: 20px
+			float: none	
+	
+
+//CUSTOMERS		
+.customers
+	min-height: 605px
+	margin-bottom: 65px
+	background-color: #fff
+
+	&__top
+		@extend .merchants__top
+
+	&__title
+		@extend .merchants__title
+		position: relative
+		z-index: 10
+		margin-bottom: 38px
+		+r(720)
+			margin-bottom: 10px
+
+	&__center
+		text-align: center	
+		color: #666
+		font: 400 14px/22px "Futura Demic Regular", sans-serif
+		margin-bottom: 90px
+
+	figcaption
+		text-align: center
+		color: #19223c
+
+//MID, mid_blue		
+.mid
+	position: relative
+	border-width: 2px
+	border-style: solid
+	text-align: center
+	margin-top: 90px
+	margin-bottom: 114px
+
+	&_blue
+		padding: 0 40px
+		border-color: #00b0dc
+
+	&__name
+		font: 400 30px/48px "Futura Demic Regular", sans-serif
+		text-transform: uppercase
+		text-align: center
+		position: relative
+		top: -20px
+		z-index: 20
+		background-color: #FFF
+		display: inline-block
+
+		&_blue
+			color: #00b0dc
+			padding: 0 34px	
+			+r(480)
+				padding: 0
+				font-size: 17px
+				line-height: 1.4	
+	&__btn
+		color: white
+		font: 400 18px/68px "Futura Demic Regular", sans-serif
+		text-transform: uppercase
+		max-width: 621px
+		width: 100%
+		display: block
+		height: 68px
+		background-color: #00b0dc
+		border: 2px solid #00b0dc
+		margin: 77px auto 42px
+		outline: 0
+		&:active
+			background-color: #25A0BE
+			+tr(all 0.1s ease)
+		+r(720)	
+			margin: 30px 0 30px	
+
+//MID_black
+.mid
+
+	&_black
+		color: #19223c
+		padding: 0 100px
+		border-color: #19223c
+		min-height: 231px
+		+r(720)
+			padding: 0 40px 20px
+
+	&__name
+		&_black
+			color: #19223c
+			padding: 0 100px
+			+r(720)
+				padding: 0 20px
+				font-size: 25px
+
+
+	&__text
+		&_black
+			color: #19223c
+			font: 400 14px/22px "Roboto Regular"	
+
+//INDUSTRY
+.industry
+	position: relative
+	background: #065071 url(../img/ind__top.jpg) no-repeat top center
+	background-size: 100%
+	padding-top: 140px
+	+r(720)
+		padding-top: 80px
+
+	&__wrap
+		background:  url(../img/ind__bot.jpg) no-repeat bottom center
+		background-size: 100%	
+		padding-bottom: 82px
+
+	&__title
+		color: #fff	
+		padding: 0 0 82px
+		text-align: center
+		text-transform: uppercase
+		font: 400 72px/48px "Futura Demic Regular"
+		+r(720)
+			font-size: 40px
+
+	&__top
+		font-size: 0
+
+	&__bl
+		width: 25%
+		padding-right: 20px
+		display: inline-block
+		text-align: center
+		font-size: 15px
+		vertical-align: top
+		&__icon
+			display: block
+			outline: 1px solid red
+		+r(720)
+			width: 50%	
+
+	&__name
+		color: #00b0dc
+		font: 400 16px/36px "Futura Demic Regular", sans-serif
+		text-transform: uppercase
+		text-align: center
+		display: block
+		position: relative
+		margin-bottom: 60px
+		&:after
+			display: block
+			content: ' '
+			width: 100px
+			border-bottom: 2px solid #00b0dc
+			position: absolute
+			left: 50%
+			bottom: -25px
+			margin-left: -50px
+
+	&__bottom
+		+png(paper)
+		width: auto
+		height: auto
+		background-position: bottom center
+		.industry__bl
+			display: block
+			width: auto
+		&:before, &:after
+			display: table
+			content: " "
+		&:after
+			clear: both	
+		+r(720)
+			background: none		
+	&__col
+		width: 25%
+		+r(720)
+			width: 50%
+	.col1 
+		float: left
+	.col2
+		float: right	
+
+@each $s in on,re,sp,gr,ph,bi,fa, ca
+	.icon__#{$s}
+		+s(#{$s})
+		margin-bottom: 40px
+		display: inline-block
+
+//FOOTER
 .footer
 	font-size: 0
 	background-color: $bg
@@ -104,7 +618,6 @@ $sc: 1.05
 	color: #fff
 	padding: 35px 0 65px
 
-	
 	&__logo
 		float: left
 		margin-top: 0px
@@ -141,16 +654,24 @@ $sc: 1.05
 			display: block
 			text-decoration: none
 			line-height: 1.5
-	h4, .adr, .btcont
+		+r(480)
+			width: auto	
+			display: block
+			text-align: center
+			padding-right: 0
+	&__adr, &__btcont
 		margin-bottom: 20px
+		+r(480)
+			display: none
 	h4 
-		color: $blue	
+		color: $blue
+		margin-bottom: 20px	
 
-.mainfooter
-	margin-left: 159px
-	overflow: hidden	
-	+r(900)
-		margin-left: 0
+	&__main
+		margin-left: 159px
+		overflow: hidden	
+		+r(900)
+			margin-left: 0
 
 
 	

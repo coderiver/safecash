@@ -25,10 +25,26 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; position: relative; }
+body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; position: relative; background-color: #fff; }
 
-@font-face { font-family: "Roboto Regular"; src: url("fonts/Roboto Regular.eot"); src: url("fonts/Roboto Regular.eot?#iefix") format("embedded-opentype"), url("fonts/Roboto Regular.woff2") format("woff2"), url("fonts/Roboto Regular.woff") format("woff"), url("fonts/Roboto Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "Roboto Regular"; src: url("fonts/RobotoRegular.eot"); src: url("fonts/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("fonts/RobotoRegular.woff2") format("woff2"), url("fonts/RobotoRegular.woff") format("woff"), url("fonts/RobotoRegular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "Futura Demic Regular"; src: url("fonts/FuturaDemiCRegular.eot"); src: url("fonts/FuturaDemiCRegular.eot?#iefix") format("embedded-opentype"), url("fonts/FuturaDemiCRegular.woff2") format("woff2"), url("fonts/FuturaDemiCRegular.woff") format("woff"), url("fonts/FuturaDemiCRegular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+a { color: #19223c; text-decoration: underline; }
+
+h1 { color: white; font: 400 48px/60px "Futura Demic Regular", sans-serif; text-transform: uppercase; }
+
+h2 { color: #19223c; font: 400 72px/48px "Futura Demic Regular", sans-serif; }
+
+h3 { color: #19223c; font: 30px/48px "Futura Demic Regular", sans-serif; }
+
+h5 { color: #19223c; font: 30px/48px "Futura Demic Regular", sans-serif; }
+
+.btn { text-align: center; font-family: "Futura Demic Regular"; font-size: 11px; font-weight: 400; line-height: 20px; text-transform: uppercase; }
+
+.btn__transparent { width: 159px; height: 34px; background-color: transparent; border: 2px solid white; color: white; text-align: center; }
+
+.btn__blue { width: 356px; height: 68px; background-color: #00b0dc; border: 2px solid #00b0dc; text-align: center; }
+
 .is-left { text-align: left; }
 
 .is-right { text-align: right; }
@@ -42,16 +58,14 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; positi
 
 .inner { margin: auto; width: 960px; }
 
-.inner__header, .inner__footer { max-width: 1350px; width: 90%; padding: 0 20px; }
-.inner__header:before, .inner__footer:before, .inner__header:after, .inner__footer:after { content: " "; display: table; }
-.inner__header:after, .inner__footer:after { clear: both; }
-@media only screen and (max-width: 900px) { .inner__header, .inner__footer { width: 100%; padding: 0; } }
-
-.inner__footer { padding: 0 20px; }
+.inner_l { max-width: 1350px; width: 96%; padding: 0 20px; position: relative; }
+.inner_l:before, .inner_l:after { content: " "; display: table; }
+.inner_l:after { clear: both; }
+@media only screen and (max-width: 900px) { .inner_l { width: 94%; padding: 0; } }
 
 .logo { background: url("../img/logo.png") no-repeat left top; font-size: 0; color: transparent; width: 119px; height: 16px; }
 
-.top__header { min-height: 40px; background-color: #19223c; overflow: hidden; margin-bottom: 100px; }
+.top__header { min-height: 40px; background-color: #19223c; overflow: hidden; }
 .top__header__logo { float: left; margin-top: 12px; }
 @media only screen and (max-width: 900px) { .top__header__logo { float: right; display: block; margin-right: 20px; margin-top: 20px; } }
 .top__header__nav { float: right; padding-top: 12px; }
@@ -62,8 +76,142 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; positi
 @media only screen and (max-width: 900px) { .top__header__nav li { display: block; font-size: 20px; margin: 0; } }
 .top__header__nav li a { text-transform: uppercase; color: #fff; text-decoration: none; padding: 0 5px; font-family: "Futura Demic Regular", sans-serif; }
 @media only screen and (max-width: 900px) { .top__header__nav li a { display: block; padding: 5px 0; text-indent: 20px; } }
-.top__header__nav li a:hover, .top__header__nav li a:focus { color: #00aed9; -moz-transition: background-color 0.5s ease; -o-transition: background-color 0.5s ease; -webkit-transition: background-color 0.5s ease; transition: background-color 0.5s ease; }
+.top__header__nav li a:hover, .top__header__nav li a:focus { color: #00aed9; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
 @media only screen and (max-width: 900px) { .top__header__nav li a:hover, .top__header__nav li a:focus { text-decoration: none; transform: scale(1); display: block; color: #000; background-color: #00abd6; } }
+
+.top { background: url("../img/top-bg.jpg") top center; min-height: 757px; position: relative; overflow: hidden; padding-bottom: 58px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.top__title { margin: 103px 0; position: relative; }
+.top__title:after { display: block; content: " "; position: absolute; bottom: -30px; left: 0; width: 65px; border-bottom: 2px solid white; }
+@media only screen and (max-width: 800px) { .top__title { font-size: 39px; } }
+@media only screen and (max-width: 640px) { .top__title { font-size: 35px; } }
+@media only screen and (max-width: 600px) { .top__title { margin: 80px 0; } }
+@media only screen and (max-width: 480px) { .top__title { margin: 70px 0; font: 20px/1.5 "Futura Demic Regular", sans-serif; }
+  .top__title:after { bottom: -15px; } }
+.top__cont { color: white; font: 400 16px/36px "Futura Demic Regular", sans-serif; text-transform: uppercase; overflow: hidden; float: left; min-width: 410px; width: 35%; padding-right: 30px; }
+@media only screen and (max-width: 900px) { .top__cont { min-width: 350px; } }
+@media only screen and (max-width: 720px) { .top__cont { min-width: 285px; } }
+@media only screen and (max-width: 620px) { .top__cont { min-width: 270px; } }
+@media only screen and (max-width: 600px) { .top__cont { min-width: auto; width: auto; float: none; padding-right: 0; margin-bottom: 30px; } }
+@media only screen and (max-width: 480px) { .top__cont { line-height: 1.7; font-size: 16px; } }
+.top__l:before, .top__l:after { content: " "; display: table; }
+.top__l:after { clear: both; }
+.top .btn__transparent { position: absolute; right: 10px; top: 14px; }
+
+.registration { width: 36.61538%; width: 476px; min-height: 398px; padding-top: 2.53998%; padding-right: 5.26811%; padding-bottom: 4.51552%; padding-left: 5.73848%; background-color: white; border: 3px solid #00b0dc; float: right; }
+@media only screen and (max-width: 1024px) { .registration { width: auto; } }
+@media only screen and (max-width: 800px) { .registration { min-height: 390px; } }
+@media only screen and (max-width: 640px) { .registration { min-height: 387px; } }
+@media only screen and (max-width: 600px) { .registration { min-height: auto; float: none; width: auto; } }
+.registration__title { margin-bottom: 35px; color: #00b0dc; font: 400 30px/48px "Futura Demic Regular", sans-serif; text-align: center; text-transform: uppercase; }
+@media only screen and (max-width: 800px) { .registration__title { font-size: 24px; margin-bottom: 25px; } }
+@media only screen and (max-width: 640px) { .registration__title { font-size: 20px; } }
+@media only screen and (max-width: 480px) { .registration__title { margin-bottom: 10px; } }
+.registration input { width: 100%; display: block; height: 34px; border: 2px solid #ccc; padding: 0 20px; }
+.registration input:-ms-input-placeholder { text-align: center; text-transform: uppercase; }
+.registration input:-moz-placeholder { text-align: center; text-transform: uppercase; }
+.registration input::-moz-placeholder { text-align: center; text-transform: uppercase; }
+.registration input::-webkit-input-placeholder { text-align: center; text-transform: uppercase; }
+.registration input::placeholder { text-align: center; text-transform: uppercase; }
+.registration input[type=checkbox] { display: inline-block; width: auto; vertical-align: middle; width: 21px; height: 19px; border: 2px solid #ccc; margin-right: 20px; padding: 0; }
+.registration label { width: 100%; display: block; margin-bottom: 19px; }
+.registration label .check { display: inline-block; vertical-align: middle; color: #00b0dc; font: 400 12px/20px "Futura Demic Regular", sans-serif; text-decoration: underline; text-transform: uppercase; }
+.registration label[for=ac] { display: inline-block; width: auto; }
+.registration button[type=button] { width: 100%; height: 68px; background-color: #00b0dc; border: 2px solid #00b0dc; color: white; font: 400 18px/40px "Futura Demic Regular", sans-serif; text-transform: uppercase; outline: 0; }
+.registration button[type=button]:active { background-color: #25A0BE; -moz-transition: all 0.1s ease; -o-transition: all 0.1s ease; -webkit-transition: all 0.1s ease; transition: all 0.1s ease; }
+@media only screen and (max-width: 480px) { .registration button[type=button] { height: 40px; } }
+
+.merchants { min-height: 523px; font-size: 0; }
+@media only screen and (max-width: 720px) { .merchants { margin-bottom: 60px; } }
+.merchants__top, .merchants__title, .difference__title, .customers__title, .difference__top, .customers__top { text-align: center; font: 400 18px/48px "Futura Demic Regular", sans-serif; color: #19223c; text-transform: uppercase; }
+@media only screen and (max-width: 480px) { .merchants__top, .merchants__title, .difference__title, .customers__title, .difference__top, .customers__top { font-size: 17px; padding-top: 30px; line-height: 1.5; } }
+.merchants__title, .difference__title, .customers__title { font-size: 72px; padding-top: 0; }
+@media only screen and (max-width: 720px) { .merchants__title, .difference__title, .customers__title { font-size: 45px; } }
+@media only screen and (max-width: 480px) { .merchants__title, .difference__title, .customers__title { font-size: 30px; line-height: 1.5; } }
+
+.fig { width: 33%; min-height: 432px; display: inline-block; text-align: center; vertical-align: top; margin-bottom: 65px; position: relative; }
+@media only screen and (max-width: 720px) { .fig { width: 100%; display: block; min-height: auto; margin-bottom: 0px; } }
+.fig .wrp { margin-bottom: 65px; min-height: 318px; position: relative; }
+@media only screen and (max-width: 720px) { .fig .wrp { margin-bottom: 10px; } }
+.fig .wrp img { display: block; margin: auto; position: absolute; top: 0; bottom: 0; right: 0; left: 0; max-width: 100%; height: auto; }
+.fig figcaption { color: #19223c; font: 400 14px/22px "Roboto Regular", sans-serif; position: relative; text-align: left; }
+@media only screen and (max-width: 720px) { .fig figcaption { text-align: center; font-size: 18px; } }
+.fig figcaption span { display: block; color: #19223c; font: 400 36px/42px "Futura Demic Regular"; text-transform: uppercase; position: absolute; left: 0px; top: -20px; }
+@media only screen and (max-width: 720px) { .fig figcaption span { position: static; display: inline; } }
+.fig figcaption p { margin-left: 40px; }
+@media only screen and (max-width: 720px) { .fig figcaption p { display: inline; margin-left: 15px; } }
+
+.difference { min-height: 363px; font-size: 0; overflow: hidden; margin-bottom: 40px; }
+.difference__title { margin-bottom: 55px; }
+.difference__cont { font-size: 14px; display: inline-block; width: 25%; font-size: 0; vertical-align: top; text-align: center; padding-right: 3.84615%; }
+@media only screen and (max-width: 720px) { .difference__cont { width: 50%; margin-bottom: 30px; }
+  .difference__cont:nth-of-type(even) { padding-right: 0; } }
+@media only screen and (max-width: 480px) { .difference__cont { width: 100%; display: block; padding: 0 15px; } }
+.difference__cont h6 { padding-bottom: 30px; border-bottom: 2px solid #eaebeb; text-align: center; text-transform: uppercase; font: 400 14px/20px "Futura Demic Regular", sans-serif; margin-bottom: 35px; position: relative; color: #19223c; }
+.difference__cont h6:after { content: " "; display: block; width: 15px; height: 15px; background-color: #00b0dc; bottom: -15px; position: absolute; left: 50%; margin-left: -7.5px; z-index: 99; }
+.difference__cont p { color: #666; font-size: 14px; font-weight: 400; line-height: 22px; text-align: left; font-family: "Futura Demic Regular", sans-serif; }
+
+.girl { min-height: 730px; background: url("../img/girl.jpg") no-repeat 0 0; width: 1366px; height: 730px; width: auto; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; padding-top: 85px; }
+.girl blockquote { max-width: 530px; min-height: 186px; float: right; color: white; font: 400 30px/40px "Roboto Regular", sans-serif; display: inline-block; overflow: hidden; text-transform: uppercase; }
+@media only screen and (max-width: 720px) { .girl blockquote { font-size: 25px; } }
+@media only screen and (max-width: 480px) { .girl blockquote { font-size: 20px; float: none; } }
+
+.customers { min-height: 605px; margin-bottom: 65px; background-color: #fff; }
+.customers__title { position: relative; z-index: 10; margin-bottom: 38px; }
+@media only screen and (max-width: 720px) { .customers__title { margin-bottom: 10px; } }
+.customers__center { text-align: center; color: #666; font: 400 14px/22px "Futura Demic Regular", sans-serif; margin-bottom: 90px; }
+.customers figcaption { text-align: center; color: #19223c; }
+
+.mid { position: relative; border-width: 2px; border-style: solid; text-align: center; margin-top: 90px; margin-bottom: 114px; }
+.mid_blue { padding: 0 40px; border-color: #00b0dc; }
+.mid__name { font: 400 30px/48px "Futura Demic Regular", sans-serif; text-transform: uppercase; text-align: center; position: relative; top: -20px; z-index: 20; background-color: #FFF; display: inline-block; }
+.mid__name_blue { color: #00b0dc; padding: 0 34px; }
+@media only screen and (max-width: 480px) { .mid__name_blue { padding: 0; font-size: 17px; line-height: 1.4; } }
+.mid__btn { color: white; font: 400 18px/68px "Futura Demic Regular", sans-serif; text-transform: uppercase; max-width: 621px; width: 100%; display: block; height: 68px; background-color: #00b0dc; border: 2px solid #00b0dc; margin: 77px auto 42px; outline: 0; }
+.mid__btn:active { background-color: #25A0BE; -moz-transition: all 0.1s ease; -o-transition: all 0.1s ease; -webkit-transition: all 0.1s ease; transition: all 0.1s ease; }
+@media only screen and (max-width: 720px) { .mid__btn { margin: 30px 0 30px; } }
+
+.mid_black { color: #19223c; padding: 0 100px; border-color: #19223c; min-height: 231px; }
+@media only screen and (max-width: 720px) { .mid_black { padding: 0 40px 20px; } }
+.mid__name_black { color: #19223c; padding: 0 100px; }
+@media only screen and (max-width: 720px) { .mid__name_black { padding: 0 20px; font-size: 25px; } }
+.mid__text_black { color: #19223c; font: 400 14px/22px "Roboto Regular"; }
+
+.industry { position: relative; background: #065071 url(../img/ind__top.jpg) no-repeat top center; background-size: 100%; padding-top: 140px; }
+@media only screen and (max-width: 720px) { .industry { padding-top: 80px; } }
+.industry__wrap { background: url(../img/ind__bot.jpg) no-repeat bottom center; background-size: 100%; padding-bottom: 82px; }
+.industry__title { color: #fff; padding: 0 0 82px; text-align: center; text-transform: uppercase; font: 400 72px/48px "Futura Demic Regular"; }
+@media only screen and (max-width: 720px) { .industry__title { font-size: 40px; } }
+.industry__top { font-size: 0; }
+.industry__bl { width: 25%; padding-right: 20px; display: inline-block; text-align: center; font-size: 15px; vertical-align: top; }
+.industry__bl__icon { display: block; outline: 1px solid red; }
+@media only screen and (max-width: 720px) { .industry__bl { width: 50%; } }
+.industry__name { color: #00b0dc; font: 400 16px/36px "Futura Demic Regular", sans-serif; text-transform: uppercase; text-align: center; display: block; position: relative; margin-bottom: 60px; }
+.industry__name:after { display: block; content: " "; width: 100px; border-bottom: 2px solid #00b0dc; position: absolute; left: 50%; bottom: -25px; margin-left: -50px; }
+.industry__bottom { background: url("../img/paper.png") no-repeat 0 0; width: 494px; height: 463px; width: auto; height: auto; background-position: bottom center; }
+.industry__bottom .industry__bl { display: block; width: auto; }
+.industry__bottom:before, .industry__bottom:after { display: table; content: " "; }
+.industry__bottom:after { clear: both; }
+@media only screen and (max-width: 720px) { .industry__bottom { background: none; } }
+.industry__col { width: 25%; }
+@media only screen and (max-width: 720px) { .industry__col { width: 50%; } }
+.industry .col1 { float: left; }
+.industry .col2 { float: right; }
+
+.icon__on { background: url('../img/icons-s37a99d1752.png') 0 -445px no-repeat; width: 94px; height: 93px; margin-bottom: 40px; display: inline-block; }
+
+.icon__re { background: url('../img/icons-s37a99d1752.png') 0 -652px no-repeat; width: 109px; height: 94px; margin-bottom: 40px; display: inline-block; }
+
+.icon__sp { background: url('../img/icons-s37a99d1752.png') 0 -756px no-repeat; width: 95px; height: 93px; margin-bottom: 40px; display: inline-block; }
+
+.icon__gr { background: url('../img/icons-s37a99d1752.png') 0 -341px no-repeat; width: 70px; height: 94px; margin-bottom: 40px; display: inline-block; }
+
+.icon__ph { background: url('../img/icons-s37a99d1752.png') 0 -548px no-repeat; width: 43px; height: 94px; margin-bottom: 40px; display: inline-block; }
+
+.icon__bi { background: url('../img/icons-s37a99d1752.png') 0 0 no-repeat; width: 94px; height: 93px; margin-bottom: 40px; display: inline-block; }
+
+.icon__fa { background: url('../img/icons-s37a99d1752.png') 0 -237px no-repeat; width: 88px; height: 94px; margin-bottom: 40px; display: inline-block; }
+
+.icon__ca { background: url('../img/icons-s37a99d1752.png') 0 -103px no-repeat; width: 89px; height: 94px; margin-bottom: 40px; display: inline-block; }
 
 .footer { font-size: 0; background-color: #19223c; color: #fff; padding: 35px 0 65px; }
 .footer__logo { float: left; margin-top: 0px; }
@@ -75,8 +223,9 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; positi
 .footer__bl > div { display: inline-block; text-align: left; }
 .footer__bl p { font-size: 12px; color: #fff; line-height: 1.5; font-family: "Roboto Regular", sans-serif; }
 .footer__bl a { font-size: 12px; color: #fff; display: block; text-decoration: none; line-height: 1.5; }
-.footer h4, .footer .adr, .footer .btcont { margin-bottom: 20px; }
-.footer h4 { color: #00b0dc; }
-
-.mainfooter { margin-left: 159px; overflow: hidden; }
-@media only screen and (max-width: 900px) { .mainfooter { margin-left: 0; } }
+@media only screen and (max-width: 480px) { .footer__bl { width: auto; display: block; text-align: center; padding-right: 0; } }
+.footer__adr, .footer__btcont { margin-bottom: 20px; }
+@media only screen and (max-width: 480px) { .footer__adr, .footer__btcont { display: none; } }
+.footer h4 { color: #00b0dc; margin-bottom: 20px; }
+.footer__main { margin-left: 159px; overflow: hidden; }
+@media only screen and (max-width: 900px) { .footer__main { margin-left: 0; } }
