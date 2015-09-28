@@ -49,11 +49,11 @@
 
 
 body
+	background-color: #fff
 	font-family: Arial, sans-serif
 	font-size: 12px
 	line-height: 1.4
 	position: relative
-	background-color: #fff
 
 //fonts
 +font("Roboto Regular", "RobotoRegular")	
@@ -92,35 +92,55 @@ h5
 	font: 30px/48px "Futura Demic Regular", sans-serif
 
 .btn
-	text-align: center
 	font-family: "Futura Demic Regular"
 	font-size: 11px
 	font-weight: 400
 	line-height: 20px
+	text-align: center
 	text-transform: uppercase
 
-.btn__transparent
-	width: 159px
-	height: 34px
+.btn_transparent
 	background-color: transparent
 	border: 2px solid white
 	color: white
+	height: 34px
 	text-align: center
+	width: 159px
 	
 .btn__blue
-	width: 356px
-	height: 68px
 	background-color: #00b0dc
 	border: 2px solid #00b0dc
+	height: 68px
 	text-align: center
+	width: 356px
 
+.title
+	color: #19223c
+	font: 400  18px/1 "Futura Demic Regular", sans-serif
+	margin-bottom: 3px
+	padding-top: 63px	
+	text-align: center
+	text-transform: uppercase
+	+r(480)
+		font-size: 17px
+		padding-top: 30px
+		line-height: 1.5
 
-
-
-
-
-
-
+.subtitle
+	color: #19223c
+	font: 400  72px/1 "Futura Demic Regular", sans-serif
+	margin-bottom: 38px
+	padding-top: 0
+	position: relative
+	text-align: center
+	text-transform: uppercase
+	z-index: 10
+	+r(720)
+		font-size: 45px
+		margin-bottom: 10px
+	+r(480)
+		font-size: 30px	
+		line-height: 1.5
 
 .is-left
 	text-align: left

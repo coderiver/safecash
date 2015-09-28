@@ -11,9 +11,9 @@ $sc: 1.05
 
 .inner_l
 	max-width: 1350px
-	width: 96%
 	padding: 0 20px	
 	position: relative
+	width: 96%
 	&:before, &:after
 		content: ' '
 		display: table
@@ -24,24 +24,22 @@ $sc: 1.05
 		padding: 0
 
 .logo
-	background: url($img + 'logo.png') no-repeat left top
-	font-size: 0
+	+s(logo)
 	color: transparent
-	width: 119px
-	height: 16px
+	font-size: 0
 
-//HEADER
-.top__header
-	min-height: 40px
+//TOP
+.top
 	background-color: $bg
+	min-height: 40px
 	overflow: hidden
 
 	&__logo 
 		float: left
 		margin-top: 12px
 		+r(900)
-			float: right
 			display: block
+			float: right
 			margin-right: 20px
 			margin-top: 20px
 	&__nav
@@ -49,19 +47,17 @@ $sc: 1.05
 		padding-top: 12px
 		+r(900)
 			float: none
-			padding: 0
 			margin: 50px 0 25px
+			padding: 0
 
 		ul
 			list-style: none
-			padding: 0
-			margin: 0
 
 		li
 			display: inline-block
-			vertical-align: middle
-			margin-right: 15px
 			font-size: 11px
+			margin-right: 15px
+			vertical-align: middle
 			&:last-child
 				margin-right: 0
 
@@ -71,11 +67,11 @@ $sc: 1.05
 				margin: 0
 
 			a
-				text-transform: uppercase
-				color: #fff
-				text-decoration: none
-				padding: 0 5px
 				+fRegular
+				color: #fff
+				padding: 0 5px
+				text-decoration: none
+				text-transform: uppercase
 				+r(900)
 					display: block
 					padding: 5px 0
@@ -84,31 +80,33 @@ $sc: 1.05
 					color: darken($blue, .6)
 					+tr(all 0.5s ease)
 					+r(900)
+						background-color: darken($blue, 1.2)
+						color: #000
+						display: block
 						text-decoration: none
 						transform: scale(1)
-						display: block
-						color: #000
-						background-color: darken($blue, 1.2)
-//TOP
-.top
-	background: url($img + 'top-bg.jpg') top center
+//MAIN
+.main
+	+jpg(top-bg)
+	height: auto
 	min-height: 757px
-	position: relative
 	overflow: hidden
 	padding-bottom: 58px
+	position: relative
+	width: auto
 	+cover
 
 	&__title
 		margin: 103px 0
 		position: relative
 		&:after
-			display: block
-			content: ' '
-			position: absolute
-			bottom: -30px
-			left: 0
-			width: 65px
 			border-bottom: 2px solid white
+			bottom: -30px
+			content: ' '
+			display: block
+			left: 0
+			position: absolute
+			width: 65px
 		+r(800)
 			font-size: 39px
 		+r(640)
@@ -116,20 +114,20 @@ $sc: 1.05
 		+r(600)
 			margin: 80px 0	
 		+r(480)
-			margin: 70px 0
 			font: 20px/1.5 "Futura Demic Regular", sans-serif
+			margin: 70px 0
 			&:after
 				bottom: -15px	
 
 	&__cont
 		color: white
-		font: 400 16px/36px "Futura Demic Regular", sans-serif
-		text-transform: uppercase	
-		overflow: hidden
 		float: left
+		font: 400 16px/36px "Futura Demic Regular", sans-serif
 		min-width: 410px
-		width: 35%
+		overflow: hidden
 		padding-right: 30px
+		text-transform: uppercase	
+		width: 35%
 		+r(900)
 			min-width: 350px
 		+r(720)
@@ -137,14 +135,14 @@ $sc: 1.05
 		+r(620)
 			min-width: 270px	
 		+r(600)
-			min-width: auto
-			width: auto	
 			float: none	
-			padding-right: 0
 			margin-bottom: 30px
+			min-width: auto
+			padding-right: 0
+			width: auto	
 		+r(480)
-			line-height: 1.7
 			font-size: 16px	
+			line-height: 1.7
 
 	&__l
 		&:before, &:after
@@ -152,25 +150,23 @@ $sc: 1.05
 			display: table
 		&:after
 			clear: both	
-	.btn__transparent
+	.btn_transparent
 		position: absolute
 		right: 10px
 		top: 14px		
 
 //REGISTRATION
 .registration
-	width: (476px / 1300px) * 100% 
-	//max-width: 476px
-	width: 476px
-	min-height: 398px
-	//padding: 27px 56px 48px 61px
-	padding-top: (27px / 1063px) * 100%
-	padding-right: (56px / 1063px) * 100%
-	padding-bottom: (48px / 1063px) * 100%
-	padding-left: (61px / 1063px) * 100%
 	background-color: white
 	border: 3px solid #00b0dc
 	float: right
+	min-height: 398px
+	padding-bottom: (48px / 1063px) * 100%
+	padding-left: (61px / 1063px) * 100%
+	padding-right: (56px / 1063px) * 100%
+	padding-top: (27px / 1063px) * 100%
+	width: (476px / 1300px) * 100% 
+	width: 476px
 	+r(1024)
 		width: auto
 	+r(800)
@@ -183,9 +179,9 @@ $sc: 1.05
 		width: auto	
 
 	&__title
-		margin-bottom: 35px
 		color: #00b0dc
 		font: 400 30px/48px "Futura Demic Regular", sans-serif
+		margin-bottom: 35px
 		text-align: center
 		text-transform: uppercase
 		+r(800)
@@ -197,35 +193,35 @@ $sc: 1.05
 			margin-bottom: 10px	
 
 	input
-		width: 100%
+		border: 2px solid #ccc
 		display: block
 		height: 34px
-		border: 2px solid #ccc
 		padding: 0 20px
+		width: 100%
 		+placeholder
 			text-align: center
 			text-transform: uppercase
 		&[type=checkbox]
-			display: inline-block
-			width: auto
-			vertical-align: middle
-			width: 21px
-			height: 19px
 			border: 2px solid #ccc
+			display: inline-block
+			height: 19px
 			margin-right: 20px	
 			padding: 0
+			vertical-align: middle
+			width: 21px
+			width: auto
 
 	label
-		width: 100%
 		display: block
 		margin-bottom: 19px
+		width: 100%
 		.check
-			display: inline-block
-			vertical-align: middle
 			color: #00b0dc
+			display: inline-block
 			font: 400 12px/20px "Futura Demic Regular", sans-serif
 			text-decoration: underline
 			text-transform: uppercase
+			vertical-align: middle
 
 	label[for=ac]
 		display: inline-block
@@ -233,64 +229,46 @@ $sc: 1.05
 
 	button
 		&[type=button]
-			width: 100%
-			height: 68px
 			background-color: #00b0dc
 			border: 2px solid #00b0dc
 			color: white
 			font: 400 18px/40px "Futura Demic Regular", sans-serif
-			text-transform: uppercase
+			height: 68px
 			outline: 0
+			text-transform: uppercase
+			width: 100%
 			&:active
-				background-color: #25A0BE
 				+tr(all 0.1s ease)
+				background-color: #25A0BE
 			+r(480)
 				height: 40px	
 
 
 //MERCHANTS
 .merchants
+	font-size: 0
 	min-height: 523px
-	font-size: 0	
 	+r(720)
 		margin-bottom: 60px
 
-	&__top
-		text-align: center
-		font: 400 18px/48px "Futura Demic Regular", sans-serif
-		color: #19223c
-		text-transform: uppercase
-		+r(480)
-			font-size: 17px
-			padding-top: 30px
-			line-height: 1.5
-
-	&__title
-		@extend .merchants__top
-		font-size: 72px
-		padding-top: 0
-		+r(720)
-			font-size: 45px
-		+r(480)
-			font-size: 30px	
-			line-height: 1.5
-
 //FIG
 .fig
-	width: 33%
-	min-height: 432px
 	display: inline-block
+	min-height: 432px
+	position: relative
 	text-align: center	
 	vertical-align: top
-	margin-bottom: 65px
-	position: relative
+	width: 33%
+	margin-bottom: 60px
 	+r(720)
-		width: 100%
 		display: block
-		min-height: auto
 		margin-bottom: 0px
+		min-height: auto
+		width: 100%
+		&:last-of-type
+			margin-bottom: 20px
 
-	.wrp
+	&__wrp
 		margin-bottom: 65px
 		min-height: 318px
 		position: relative
@@ -298,15 +276,15 @@ $sc: 1.05
 			margin-bottom: 10px
 		
 		img
-			display: block
-			margin: auto
-			position: absolute
-			top: 0
 			bottom: 0
-			right: 0
-			left: 0
-			max-width: 100%
+			display: block
 			height: auto	
+			left: 0
+			margin: auto
+			max-width: 100%
+			position: absolute
+			right: 0
+			top: 0
 
 	figcaption
 		color: #19223c
@@ -318,12 +296,12 @@ $sc: 1.05
 			font-size: 18px
 
 		span
-			display: block
 			color: #19223c
+			display: block
 			font: 400 36px/42px "Futura Demic Regular"
-			text-transform: uppercase	
-			position: absolute
 			left: 0px
+			position: absolute
+			text-transform: uppercase	
 			top: -20px
 			+r(720)
 				position: static
@@ -337,80 +315,73 @@ $sc: 1.05
 
 //DIFFERENCE
 .difference
-	min-height: 363px
 	font-size: 0
-	overflow: hidden
 	margin-bottom: 40px
-
-	&__top
-		@extend .merchants__top
-
-	&__title
-		@extend .merchants__title	
-		margin-bottom: 55px
+	min-height: 363px
+	overflow: hidden
 
 	&__cont
-		font-size: 14px
 		display: inline-block
-		width: 25%
 		font-size: 0
-		vertical-align: top
-		text-align: center
+		font-size: 14px
 		padding-right: (50px / 1300px) * 100%
+		text-align: center
+		vertical-align: top
+		width: 25%
 		+r(720)
-			width: 50%
 			margin-bottom: 30px
+			width: 50%
 			&:nth-of-type(even)
 				padding-right: 0
 		+r(480)
-			width: 100%
 			display: block
 			padding: 0	15px	
+			width: 100%
 
 		h6
-			padding-bottom: 30px
 			border-bottom: 2px solid #eaebeb
-			text-align: center
-			text-transform: uppercase
+			color: #19223c
 			font: 400 14px/20px "Futura Demic Regular", sans-serif
 			margin-bottom: 35px
+			padding-bottom: 30px
 			position: relative
-			color: #19223c
+			text-align: center
+			text-transform: uppercase
 			&:after
-				content: ' '
-				display: block
-				width: 15px
-				height: 15px
 				background-color: #00b0dc
 				bottom: -15px
-				position: absolute
+				content: ' '
+				display: block
+				height: 15px
 				left: 50%
 				margin-left: -7.5px
+				position: absolute
+				width: 15px
 				z-index: 99
 
 		p
+			+fRegular
 			color: #666
 			font-size: 14px
 			font-weight: 400
 			line-height: 22px
 			text-align: left
-			+fRegular
 
 //GIRL
 .girl
-	min-height: 730px
 	+jpg(girl)
+	min-height: 730px
+	padding-top: 85px
 	width: auto
 	+cover
-	padding-top: 85px
 
 	blockquote
+		color: white
+		display: inline-block
+		float: right
+		font: 400 30px/40px "Roboto Regular", sans-serif
 		max-width: 530px
 		min-height: 186px
-		float: right
-		color: white
-		font: 400 30px/40px "Roboto Regular", sans-serif
-		display: inline-block
 		overflow: hidden
 		text-transform: uppercase
 		+r(720)
@@ -422,26 +393,15 @@ $sc: 1.05
 
 //CUSTOMERS		
 .customers
-	min-height: 605px
-	margin-bottom: 65px
 	background-color: #fff
-
-	&__top
-		@extend .merchants__top
-
-	&__title
-		@extend .merchants__title
-		position: relative
-		z-index: 10
-		margin-bottom: 38px
-		+r(720)
-			margin-bottom: 10px
+	margin-bottom: 65px
+	min-height: 605px
 
 	&__center
-		text-align: center	
 		color: #666
 		font: 400 14px/22px "Futura Demic Regular", sans-serif
 		margin-bottom: 90px
+		text-align: center	
 
 	figcaption
 		text-align: center
@@ -449,49 +409,49 @@ $sc: 1.05
 
 //MID, mid_blue		
 .mid
-	position: relative
-	border-width: 2px
 	border-style: solid
-	text-align: center
-	margin-top: 90px
+	border-width: 2px
 	margin-bottom: 114px
+	margin-top: 90px
+	position: relative
+	text-align: center
 
 	&_blue
-		padding: 0 40px
 		border-color: #00b0dc
+		padding: 0 40px
 
 	&__name
-		font: 400 30px/48px "Futura Demic Regular", sans-serif
-		text-transform: uppercase
-		text-align: center
-		position: relative
-		top: -20px
-		z-index: 20
 		background-color: #FFF
 		display: inline-block
+		font: 400 30px/48px "Futura Demic Regular", sans-serif
+		position: relative
+		text-align: center
+		text-transform: uppercase
+		top: -20px
+		z-index: 20
 
 		&_blue
 			color: #00b0dc
 			padding: 0 34px	
 			+r(480)
-				padding: 0
 				font-size: 17px
 				line-height: 1.4	
+				padding: 0
 	&__btn
-		color: white
-		font: 400 18px/68px "Futura Demic Regular", sans-serif
-		text-transform: uppercase
-		max-width: 621px
-		width: 100%
-		display: block
-		height: 68px
 		background-color: #00b0dc
 		border: 2px solid #00b0dc
+		color: white
+		display: block
+		font: 400 18px/68px "Futura Demic Regular", sans-serif
+		height: 68px
 		margin: 77px auto 42px
+		max-width: 621px
 		outline: 0
+		text-transform: uppercase
+		width: 100%
 		&:active
-			background-color: #25A0BE
 			+tr(all 0.1s ease)
+			background-color: #25A0BE
 		+r(720)	
 			margin: 30px 0 30px	
 
@@ -499,10 +459,10 @@ $sc: 1.05
 .mid
 
 	&_black
-		color: #19223c
-		padding: 0 100px
 		border-color: #19223c
+		color: #19223c
 		min-height: 231px
+		padding: 0 100px
 		+r(720)
 			padding: 0 40px 20px
 
@@ -511,8 +471,8 @@ $sc: 1.05
 			color: #19223c
 			padding: 0 100px
 			+r(720)
-				padding: 0 20px
 				font-size: 25px
+				padding: 0 20px
 
 
 	&__text
@@ -522,10 +482,10 @@ $sc: 1.05
 
 //INDUSTRY
 .industry
-	position: relative
-	background: #065071 url(../img/ind__top.jpg) no-repeat top center
 	background-size: 100%
+	background: #065071 url(../img/ind__top.jpg) no-repeat top center
 	padding-top: 140px
+	position: relative
 	+r(720)
 		padding-top: 80px
 
@@ -536,23 +496,24 @@ $sc: 1.05
 
 	&__title
 		color: #fff	
+		font: 400 72px/48px "Futura Demic Regular"
 		padding: 0 0 82px
 		text-align: center
 		text-transform: uppercase
-		font: 400 72px/48px "Futura Demic Regular"
 		+r(720)
 			font-size: 40px
+			padding: 40px 0
 
 	&__top
 		font-size: 0
 
 	&__bl
-		width: 25%
-		padding-right: 20px
 		display: inline-block
-		text-align: center
 		font-size: 15px
+		padding-right: 20px
+		text-align: center
 		vertical-align: top
+		width: 25%
 		&__icon
 			display: block
 			outline: 1px solid red
@@ -561,27 +522,27 @@ $sc: 1.05
 
 	&__name
 		color: #00b0dc
-		font: 400 16px/36px "Futura Demic Regular", sans-serif
-		text-transform: uppercase
-		text-align: center
 		display: block
-		position: relative
+		font: 400 16px/36px "Futura Demic Regular", sans-serif
 		margin-bottom: 60px
+		position: relative
+		text-align: center
+		text-transform: uppercase
 		&:after
-			display: block
-			content: ' '
-			width: 100px
 			border-bottom: 2px solid #00b0dc
-			position: absolute
-			left: 50%
 			bottom: -25px
+			content: ' '
+			display: block
+			left: 50%
 			margin-left: -50px
+			position: absolute
+			width: 100px
 
 	&__bottom
 		+png(paper)
-		width: auto
-		height: auto
 		background-position: bottom center
+		height: auto
+		width: auto
 		.industry__bl
 			display: block
 			width: auto
@@ -611,10 +572,6 @@ $sc: 1.05
 .footer
 	font-size: 0
 	background-color: $bg
-	// position: absolute
-	// bottom: 0 
-	// left: 0
-	// right: 0
 	color: #fff
 	padding: 35px 0 65px
 
@@ -624,19 +581,22 @@ $sc: 1.05
 		+r(900)
 			display: none
 	&__title
+		+rRegular
+		font-size: 12px
 		text-transform: uppercase
-		font-size: 12px
-		+rRegular
+		font-size: 16px
 	&__text
-		overflow: hidden
-		margin-bottom: 45px
-		font-size: 12px
 		+rRegular
+		font-size: 12px
+		margin-bottom: 45px
+		overflow: hidden
+		+r(480)
+			font-size: 14px
 	&__bl
 		display: inline-block	
-		width: 33%
 		padding-right: 20px
 		vertical-align: top
+		width: 33%
 		&:last-child 
 			padding-right: 0
 		> div 
@@ -644,21 +604,21 @@ $sc: 1.05
 			text-align: left	
 	
 		p
-			font-size: 12px
-			color: #fff
-			line-height: 1.5
 			+rRegular
-		a
+			color: #fff
 			font-size: 12px
+			line-height: 1.5
+		a
 			color: #fff
 			display: block
-			text-decoration: none
+			font-size: 12px
 			line-height: 1.5
+			text-decoration: none
 		+r(480)
-			width: auto	
 			display: block
-			text-align: center
 			padding-right: 0
+			text-align: left
+			width: auto	
 	&__adr, &__btcont
 		margin-bottom: 20px
 		+r(480)
